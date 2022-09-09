@@ -7,7 +7,7 @@ import org.springframework.data.annotation.Id;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public class Vehicle implements Serializable{
+public abstract class Vehicle implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id	
