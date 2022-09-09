@@ -14,14 +14,14 @@ public abstract class Vehicle implements Serializable{
 	private String id;
 	private String model;
 	private String plate;
-	private String owner;
+	private Owner owner;
 	
 	
 	public Vehicle() {
 		
 	}
 
-	public Vehicle(String id, String model, String plate, String owner) {
+	public Vehicle(String id, String model, String plate, Owner owner) {
 		super();
 		this.id = id;
 		this.model = model;
@@ -53,11 +53,11 @@ public abstract class Vehicle implements Serializable{
 		this.plate = plate;
 	}
 
-	public String getOwner() {
+	public Owner getOwner() {
 		return owner;
 	}
 
-	public void setOwner(String owner) {
+	public void setOwner(Owner owner) {
 		this.owner = owner;
 	}
 

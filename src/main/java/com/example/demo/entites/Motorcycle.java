@@ -11,7 +11,7 @@ public class Motorcycle extends Vehicle{
 	
 	
 	
-	public Motorcycle(String id, String model, String owner, PlateService service) {
+	public Motorcycle(String id, String model,Owner owner, PlateService service) {
 		
 		super(id, model,null, owner);
 		this.plateService = service;
