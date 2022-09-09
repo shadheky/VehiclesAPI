@@ -4,10 +4,12 @@ import java.io.Serializable;
 import java.util.Objects;
 
 import org.springframework.data.annotation.Id;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.mongodb.core.mapping.Document;
 
-@Repository
-public abstract class Vehicle implements Serializable{
+import com.example.domain.services.PlateService;
+
+@Document(collection = "vehicles")
+public  class Vehicle implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
 	@Id	
@@ -22,11 +24,10 @@ public abstract class Vehicle implements Serializable{
 	}
 
 	public Vehicle(String id, String model, String plate, Owner owner) {
-		super();
 		this.id = id;
 		this.model = model;
-		this.plate = plate;
 		this.owner = owner;
+		this.plate = plate;
 	}
 
 	public String getId() {
